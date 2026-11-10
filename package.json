@@ -1,0 +1,26 @@
+{
+  "name": "prototipo-punto-ventas",
+  "version": "1.0.0",
+  "description": "Template local de punto de venta en HTML, Tailwind CSS y JavaScript nativo",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "npx @tailwindcss/cli -i css/input.css -o css/styles.css",
+    "test": "node --test tests/*.test.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.5"
+  },
+  "private": true,
+  "type": "module"
+}

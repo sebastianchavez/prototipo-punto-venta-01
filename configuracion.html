@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f87839" />
+    <meta name="description" content="Configuración · Template de punto de venta" />
+    <title>prototipo punto ventas</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="configuracion">
+    <!-- La pantalla utiliza su propio marcado HTML y controladores JavaScript nativos. -->
+    <div id="app"></div>
+    <div id="modal-root"></div>
+    <div id="toasts" role="status" aria-live="polite"></div>
+    <div id="print-root"></div>
+    <noscript>Activa JavaScript para utilizar esta demostración.</noscript>
+    <!-- Estructura común y navegación. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="layout-fragment-3">
+      <span class="count">{{ length }}</span>
+    </script>
+
+    <!-- Estructura común y navegación. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="layout-fragment-2">
+      <a href="{{ id }}" class="nav-item {{ content }}" {{ content2 }}>
+        {{ symbolIcon }}
+        <span>{{ label }}</span>
+        {{ content3 }}
+      </a>
+    </script>
+
+    <!-- Estructura común y navegación. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="layout-fragment-1">
+      <div class="nav-label">{{ group }}</div>
+      {{ items }}
+    </script>
+
+    <!-- Estructura común y navegación. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="layout-fragment-4">
+      <a href="usuarios.html" class="nav-item {{ content }}">{{ usersIcon }}Usuarios</a>
+      <a href="configuracion.html" class="nav-item {{ content2 }}">
+        {{ settingsIcon }}Configuración
+      </a>
+    </script>
+
+    <!-- Estructura común y navegación. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="layout-page">
+      <div class="shell">
+        <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+          <a href="venta.html" class="brand">
+            <img src="assets/favicon.svg" alt="" />
+            <span>
+              prototipo
+              <br />
+              punto ventas
+              <span class="block !text-[9px] !font-normal !tracking-[1px] text-slate-400 mt-1">
+                TU LOCAL, EN ORDEN
+              </span>
+            </span>
+          </a>
+          <nav class="flex-1 overflow-y-auto pb-3">{{ nav }}</nav>
+          <div class="border-t border-slate-100 pt-3">
+            {{ content }}
+            <button class="nav-item w-full !text-[11px]" data-action="help">
+              {{ helpIcon }}¿Necesitas una mano?
+            </button>
+            <div
+              class="mt-3 bg-[#faf9f7] border border-[#f0ede8] rounded-lg p-3 flex gap-2.5 items-start"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-orange-400 mt-1"></span>
+              <div>
+                <p class="text-[10px] font-semibold text-slate-600">Modo demostración</p>
+                <p class="text-[9px] text-slate-400 mt-1 leading-4">
+                  Tus datos se guardan en este navegador.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <button
+          id="nav-backdrop"
+          class="nav-backdrop"
+          data-action="mobile-menu"
+          aria-label="Cerrar menú"
+        ></button>
+        <div class="workspace">
+          <header class="topbar">
+            <div class="flex gap-3 items-center">
+              {{ btn }}
+              <div class="crumb">
+                {{ homeIcon }}
+                <span>Mi local</span>
+                {{ chevronIcon }}
+                <strong>{{ value }}</strong>
+              </div>
+            </div>
+            <div class="flex items-center gap-5">
+              <span class="desktop-date text-[10px] text-slate-400">{{ content2 }}</span>
+              <a href="caja.html" class="badge {{ content3 }} !px-2.5 !py-1.5">
+                <span class="dot"></span>
+                {{ content4 }}
+              </a>
+              <button
+                data-action="alerts"
+                class="relative text-slate-400"
+                aria-label="Alertas de inventario"
+              >
+                {{ bellIcon }}{{ content5 }}
+              </button>
+              <span class="h-7 border-l border-slate-100"></span>
+              <button
+                data-action="login"
+                class="flex items-center gap-2.5 text-left"
+                aria-label="Cambiar usuario demo"
+              >
+                <span class="avatar">{{ initials }}</span>
+                <span class="hidden sm:block">
+                  <strong class="block text-[11px] font-semibold">{{ name }}</strong>
+                  <span class="block text-[9px] text-slate-400 mt-1">{{ role }}</span>
+                </span>
+                {{ downIcon }}
+              </button>
+            </div>
+          </header>
+          <main class="main" id="main-content">
+            {{ content6 }}
+            <footer class="app-footer">
+              <span>
+                prototipo punto ventas
+                <span class="mx-1">·</span>
+                Hecho para el día a día de tu local.
+              </span>
+              <span class="flex items-center gap-1.5">
+                <span class="w-1 h-1 rounded-full bg-emerald-500"></span>
+                Datos guardados localmente
+              </span>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </script>
+
+    <!-- Contenido de Configuración. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="configuracion-fragment-1">
+      <div class="page-heading">
+        <div>
+          <h1>Configuración</h1>
+          <p>Los detalles de tu local y tus datos de demostración.</p>
+        </div>
+        <div class="flex flex-wrap gap-2"></div>
+      </div>
+    </script>
+
+    <!-- Contenido de Configuración. Los marcadores {{ nombre }} se completan desde JavaScript. -->
+    <script type="text/html" id="configuracion-page">
+      {{ content }}
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-5">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Comprobante y saldos iniciales</h2>
+            {{ settingsIcon }}
+          </div>
+          <form id="settings-form" class="p-5">
+            <div class="form-grid">
+              {{ field }}{{ field2 }}{{ field3 }}{{ area }}{{ field4 }}{{ field5 }}{{ field6 }}
+            </div>
+            <p class="muted mt-4 leading-6">
+              Saldos de apertura globales para el balance estimado. El fondo de cada turno es una
+              asignación del efectivo existente.
+            </p>
+            <button type="submit" class="btn btn-primary mt-5">
+              {{ checkIcon }}Guardar configuración
+            </button>
+          </form>
+        </section>
+        <div class="grid gap-5 content-start">
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Respaldo de datos</h2>
+              {{ downloadIcon }}
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-slate-500 leading-6 mb-5">
+                La información se guarda en este navegador. Descarga un respaldo JSON para
+                conservarla o trasladar la demostración a otro equipo.
+              </p>
+              <div class="flex flex-wrap gap-2">{{ btn }}{{ btn2 }}</div>
+              <input type="file" id="restore-file" accept=".json,application/json" class="hidden" />
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Volver a empezar</h2>
+              {{ refreshIcon }}
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-slate-500 leading-6 mb-4">
+                Reemplaza todos los datos actuales por el catálogo y el historial de ejemplo.
+              </p>
+              {{ btn3 }}
+            </div>
+          </section>
+          <div class="note">
+            Template local · CLP · Zona horaria America/Santiago. Sin facturación ni conexiones de
+            pago. Fotografías ilustrativas de Unsplash.
+          </div>
+        </div>
+      </div>
+    </script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

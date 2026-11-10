@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f7efe5" />
+  <circle cx="300" cy="190" r="77" fill="#fffaf3" />
+  <g fill="none" stroke="#d6bfa3" stroke-width="8" stroke-linecap="round">
+    <path d="M261 167h78v75h-78zM276 168v-15a24 24 0 0 1 48 0v15" />
+    <path d="M283 193h34" />
+  </g>
+  <text x="300" y="315" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#a68a69">
+    Imagen de producto
+  </text>
+</svg>

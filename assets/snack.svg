@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#e8d9ca" />
+      <stop offset="1" stop-color="#c0a184" />
+    </linearGradient>
+    <linearGradient id="bar" x2="0" y2="1">
+      <stop stop-color="#57362b" />
+      <stop offset=".5" stop-color="#291c19" />
+      <stop offset="1" stop-color="#664333" />
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="15" stdDeviation="10" flood-opacity=".17" /></filter>
+  </defs>
+  <rect width="640" height="440" fill="url(#bg)" />
+  <ellipse cx="326" cy="316" rx="220" ry="30" fill="#684c34" opacity=".1" />
+  <g transform="rotate(-12 320 220)" filter="url(#s)">
+    <path d="m78 155 30 8 15-8h397l20 10 24-10v140l-24-10-20 10H123l-15-8-30 8z" fill="url(#bar)" />
+    <path d="m98 169 7 110M544 169l-7 110" stroke="#89634a" stroke-width="4" />
+    <path d="M140 180h359v84H140z" fill="#fff" stroke="#d24432" stroke-width="6" />
+    <text
+      x="320"
+      y="241"
+      text-anchor="middle"
+      fill="#263c79"
+      font-family="Arial,sans-serif"
+      font-style="italic"
+      font-size="55"
+      font-weight="900"
+      letter-spacing="-2"
+    >
+      SNICKERS
+    </text>
+    <text
+      x="320"
+      y="285"
+      text-anchor="middle"
+      fill="#d2a16c"
+      font-family="Arial"
+      font-size="12"
+      letter-spacing="3"
+    >
+      CHOCOLATE · CARAMELO · MANÍ
+    </text>
+  </g>
+</svg>

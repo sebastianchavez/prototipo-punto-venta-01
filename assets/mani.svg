@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#efe6d5" />
+      <stop offset="1" stop-color="#d8c5a7" />
+    </linearGradient>
+    <linearGradient id="pb" x2="1" y2="0">
+      <stop stop-color="#b4864b" />
+      <stop offset=".5" stop-color="#dab076" />
+      <stop offset="1" stop-color="#b2864d" />
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-opacity=".13" /></filter>
+  </defs>
+  <rect width="640" height="440" fill="url(#bg)" />
+  <ellipse cx="320" cy="374" rx="120" ry="18" fill="#886641" opacity=".13" />
+  <g filter="url(#s)">
+    <rect x="231" y="95" width="178" height="275" rx="35" fill="url(#pb)" />
+    <rect x="226" y="79" width="188" height="51" rx="12" fill="#835e3d" />
+    <g stroke="#9a7551" stroke-width="3">
+      <path
+        d="M241 88v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32m12-32v32"
+      />
+    </g>
+    <rect x="232" y="175" width="176" height="143" fill="#fffbeb" />
+    <text
+      x="320"
+      y="209"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="11"
+      fill="#a18b68"
+      letter-spacing="2"
+    >
+      100% NATURAL
+    </text>
+    <text x="320" y="242" text-anchor="middle" font-family="Georgia" font-size="24" fill="#695135">
+      Mantequilla
+    </text>
+    <text
+      x="320"
+      y="272"
+      text-anchor="middle"
+      font-family="Georgia"
+      font-weight="bold"
+      font-size="29"
+      fill="#695135"
+    >
+      de maní
+    </text>
+    <text
+      x="320"
+      y="301"
+      text-anchor="middle"
+      font-family="Arial"
+      font-size="10"
+      letter-spacing="2"
+      fill="#a18b68"
+    >
+      CREMOSA · 250 g
+    </text>
+  </g>
+  <g fill="#c2965e" stroke="#ab7f48" stroke-width="2" transform="translate(455 337) rotate(-30)">
+    <ellipse cx="0" cy="0" rx="20" ry="12" />
+    <ellipse cx="28" cy="0" rx="20" ry="12" />
+    <path d="M-12-6 12 6M16-6l24 12" />
+  </g>
+</svg>

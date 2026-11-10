@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f87839" />
+    <title>prototipo punto ventas</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="acceso">
+    <div id="app"></div>
+    <div id="modal-root"></div>
+    <div id="toasts" role="status" aria-live="polite"></div>
+    <div id="print-root"></div>
+    <noscript>Activa JavaScript para utilizar esta demostración.</noscript>
+
+    <!-- Pantalla de acceso demo. El controlador solo completa los usuarios disponibles. -->
+    <script type="text/html" id="acceso-page">
+      <main class="min-h-screen flex items-center justify-center p-6 bg-orange-50/30">
+        <section class="panel p-8 w-full max-w-lg">
+          <a href="venta.html" class="flex items-center gap-3 mb-9">
+            <img src="assets/favicon.svg" alt="" class="w-11 h-11" />
+            <strong class="text-sm">prototipo punto ventas</strong>
+          </a>
+          <span class="badge orange mb-4">Modo demostración</span>
+          <h1 class="text-2xl font-bold tracking-tight">Tu local, listo para comenzar</h1>
+          <p class="text-sm text-slate-500 leading-7 mt-3 mb-7">
+            Selecciona un usuario para explorar las pantallas. No necesitas contraseña.
+          </p>
+          <div class="grid gap-3">{{ users }}</div>
+          <p class="note mt-7">
+            Cambiar de usuario mantiene el turno actual. Para un relevo, cierra el turno y abre uno
+            nuevo. Los perfiles son de demostración y los datos se guardan en este navegador.
+          </p>
+        </section>
+      </main>
+    </script>
+
+    <!-- Tarjeta repetida por cada usuario activo. El contenido de texto se escapa en JavaScript. -->
+    <script type="text/html" id="acceso-user">
+      <button
+        type="button"
+        class="flex items-center gap-4 text-left p-4 border border-slate-200 rounded-xl hover:border-orange-300"
+        data-action="switch-user"
+        data-id="{{ id }}"
+      >
+        <span class="avatar !w-11 !h-11">{{ initials }}</span>
+        <span class="flex-1">
+          <strong class="block text-sm">{{ name }}</strong>
+          <span class="muted">{{ role }}</span>
+        </span>
+        <span class="text-orange-500" aria-hidden="true">→</span>
+      </button>
+    </script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
